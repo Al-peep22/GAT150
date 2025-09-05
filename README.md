@@ -35,3 +35,7 @@ Make sure you have the following installed:
 ```bash
 git clone https://github.com/Al-peep22/GAT150.git
 cd GAT150
+
+CHANGES:
+Added custom textures and different behavior for each as the dragon chases and circles while the rock troll waits and prowls each should damage when given the change to implement
+Different sizes for atmosphere and obstercal
