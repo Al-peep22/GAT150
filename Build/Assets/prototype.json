@@ -1,0 +1,166 @@
+{
+  "prototypes": [
+    {
+      "name": "player",
+      "tag": "player",
+      "transform": {
+        "position": [
+          640,
+          512
+        ],
+        "rotation": 0,
+        "scale": 2.5
+      },
+      "components": [
+        {
+          "type": "player",
+          "speed": 350,
+          "fireTime": 0.25,
+          "rotationRate": 60.0
+        },
+        {
+          "type": "SpriteRenderer",
+          "texture_name": "textures/longsword.png"
+        },
+        {
+          "type": "RigidBody",
+          "gravityScale": 0,
+          "angularDamping": 2
+        },
+        {
+          "type": "CircleCollider2D",
+          "radius": 60
+        }
+      ]
+    },
+    {
+      "name": "enemy",
+      "tag": "enemy",
+      "transform": {
+        "position": [
+          400,
+          400
+        ],
+        "rotation": 0,
+        "scale": 1.25
+      },
+      "components": [
+        {
+          "type": "enemy",
+          "speed": 0,
+          "fireTime": 3,
+          "fireTimer": 5,
+          "rotationRate": 60.0
+        },
+        {
+          "type": "SpriteRenderer",
+          "texture_name": "textures/Seraph.png"
+        },
+        {
+          "type": "MeshRenderer",
+          "meshName": "meshes/enemy.msh"
+        },
+        {
+          "type": "RigidBody",
+          "gravityScale": 0,
+          "angularDamping": 2
+        },
+        {
+          "type": "CircleCollider2D",
+          "radius": 60
+        }
+      ]
+    },
+    {
+      "name": "player-rocket",
+      "tag": "player",
+      "lifespan": 1.5,
+      "transform": {
+        "position": [
+          640,
+          512
+        ],
+        "rotation": 0,
+        "scale": 0.75
+      },
+      "components": [
+        {
+          "type": "rocket",
+          "speed": 350
+        },
+        {
+          "type": "SpriteRenderer",
+          "texture_name": "textures/unsc-missle.png"
+        },
+        {
+          "type": "RigidBody",
+          "gravityScale": 0,
+          "isSensor": true
+        },
+        {
+          "type": "CircleCollider2D",
+          "radius": 10
+        }
+      ]
+    },
+    {
+      "name": "enemy-rocket",
+      "tag": "enemy",
+      "lifespan": 1.5,
+      "transform": {
+        "position": [
+          400,
+          400
+        ],
+        "rotation": 0,
+        "scale": 0.75
+      },
+      "components": [
+        {
+          "type": "rocket",
+          "speed": 1000
+        },
+        {
+          "type": "SpriteRenderer",
+          "texture_name": "textures/plasma.png"
+        },
+        {
+          "type": "RigidBody",
+          "gravityScale": 0,
+          "isSensor": true
+        },
+        {
+          "type": "CircleCollider2D",
+          "radius": 10
+        }
+      ]
+    },
+    {
+      "name": "ring",
+      "tag": "player",
+      "lifespan": 3,
+      "transform": {
+        "position": [
+          640,
+          512
+        ],
+        "rotation": 0,
+        "scale": 0.05
+      },
+      "components": [
+        {
+          "type": "ringBlast",
+          "speed": 0.5
+        },
+        {
+          "type": "SpriteRenderer",
+          "texture_name": "textures/ring.png"
+        },
+        {
+          "type": "CircleCollider2D",
+          "radius": 9000
+        }
+      ]
+    }
+  ]
+}

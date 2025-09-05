@@ -1,0 +1,106 @@
+{
+  "prototypes": [
+    {
+      "name": "player",
+      "tag": "player",
+      "transform": {
+        "position": [
+          640,
+          512
+        ],
+        "rotation": 0,
+        "scale": 3
+      },
+      "components": [
+        {
+          "type": "playerController",
+          "speed": 850,
+          "maxSpeed": 1000,
+          "jump": 500
+        },
+        {
+          "type": "SpriteRenderer",
+          "texture_name": "textures/box.png"
+        },
+        {
+          "type": "RigidBody",
+          "gravityScale": 1.0,
+          "constrainAngle": true,
+          "shape": "capsule",
+          "scale": [ 1, 1 ]
+        }
+      ]
+    },
+    {
+      "name": "enemy",
+      "tag": "enemy",
+      "transform": {
+        "position": [
+          600,
+          512
+        ],
+        "rotation": 0,
+        "scale": 6
+      },
+      "components": [
+        {
+          "type": "enemyController",
+          "speed": 850,
+          "maxSpeed": 1000,
+          "jump": 500
+        },
+        {
+          "type": "SpriteRenderer",
+          "texture_name": "textures/enemy.png"
+        },
+        {
+          "type": "RigidBody",
+          "gravityScale": 1.0,
+          "constrainAngle": true,
+          "shape": "circle",
+          "scale": [ 1, 1 ]
+        }
+      ]
+    },
+    {
+        "name": "bat",
+        "tag": "enemy",
+        "transform": {
+            "position": [
+                100,
+                500
+            ],
+            "rotation": 0,
+            "scale": 3
+        },
+        "components": [
+            {
+                "type": "FlyingEnemyController",
+                "speed": 500,
+                "maxSpeed": 100
+            },
+            {
+                "type": "SpriteRenderer"
+            },
+            {
+                "type": "Animator",
+                "animations": [
+                    {
+                        "name": "idle",
+                        "texture_animation": "animations/bat_idle.json"
+                    }
+                ]
+            },
+            {
+                "type": "RigidBody",
+                "gravityScale": 0.0,
+                "constrainAngle": true,
+                "isSensor": true,
+                "shape": "circle",
+                "scale": [ 1, 1 ],
+                "size": [ 20, 20 ]
+            }
+        ]
+    }
+  ]
+}
